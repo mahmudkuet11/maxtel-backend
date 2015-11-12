@@ -35,3 +35,23 @@ Route::post('supplier/delete', array(
 		'as'	=>	'postDeleteSupplier',
 		'uses'	=>	'SupplierController@postDeleteSupplier'
 	));
+
+Route::post('customer/add', array(
+		'as'	=>	'postAddCustomer',
+		'uses'	=>	'CustomerController@postAddCustomer'
+	));
+
+Route::get('customer/all', array(
+		'as'	=>	'getAllSupplier',
+		'uses'	=>	'CustomerController@getAllCustomer'
+	));
+
+Route::post('customer/edit', array(
+		'as'	=>	'postEditSupplier',
+		'uses'	=>	'CustomerController@postEditCustomer'
+	));
+
+Route::post('customer/delete', array(
+		'as'	=>	'postDeleteSupplier',
+		'uses'	=>	'CustomerController@postDeleteCustomer'
+	));

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSuppliersTable extends Migration {
+class CreateCustomersTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateSuppliersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('suppliers', function($t){
+		Schema::create('customers', function($t){
 			$t->increments('id');
 			$t->string('name');
 			$t->string('phone');
@@ -28,7 +28,7 @@ class CreateSuppliersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('suppliers');
+		Schema::dropIfExists('customers');
 	}
 
 }

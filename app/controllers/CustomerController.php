@@ -1,13 +1,13 @@
 <?php
 
-class SupplierController extends BaseController{
+class CustomerController extends BaseController{
 
-	public function postAddSupplier(){
+	public function postAddCustomer(){
 		$name = Input::get('name');
 		$phone = Input::get('phone');
 		$address = Input::get('address');
 
-		DB::table('suppliers')->insert(array(
+		DB::table('customers')->insert(array(
 				'name'	=>	$name,
 				'phone'	=>	$phone,
 				'address'	=>	$address,
@@ -16,18 +16,18 @@ class SupplierController extends BaseController{
 		return 'ok';
 	}
 
-	public function getAllSupplier(){
-		$res = DB::table('suppliers')->get();
+	public function getAllCustomer(){
+		$res = DB::table('customers')->get();
 		return json_encode($res);
 	}
 
-	public function postEditSupplier(){
+	public function postEditCustomer(){
 		$id = Input::get('id');
 		$name = Input::get('name');
 		$phone = Input::get('phone');
 		$address = Input::get('address');
 
-		DB::table('suppliers')->where('id', $id)->update(array(
+		DB::table('customers')->where('id', $id)->update(array(
 				'name'	=>	$name,
 				'phone'	=>	$phone,
 				'address'	=>	$address
@@ -35,9 +35,10 @@ class SupplierController extends BaseController{
 		return 'ok';
 	}
 
-	public function postDeleteSupplier(){
+	public function postDeleteCustomer(){
 		$id = Input::get('id');
-		DB::table('suppliers')->where('id', $id)->delete();
+		DB::table('customers')->where('id', $id)->delete();
 		return 'ok';
 	}
+
 }
