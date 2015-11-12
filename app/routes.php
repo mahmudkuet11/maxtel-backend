@@ -55,3 +55,23 @@ Route::post('customer/delete', array(
 		'as'	=>	'postDeleteSupplier',
 		'uses'	=>	'CustomerController@postDeleteCustomer'
 	));
+
+Route::post('item/add', array(
+		'as'	=>	'postAddItem',
+		'uses'	=>	'ItemController@postAddItem'
+	));
+
+Route::post('item/edit', array(
+		'as'	=>	'postEditItem',
+		'uses'	=>	'ItemController@postEditItem'
+	));
+
+Route::post('item/delete', array(
+		'as'	=>	'postDeleteItem',
+		'uses'	=>	'ItemController@postDeleteItem'
+	));
+
+Route::get('item/all', array(
+		'as'	=>	'getAllItems',
+		'uses'	=>	'ItemController@getAllItems'
+	));
