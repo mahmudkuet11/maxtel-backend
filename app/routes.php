@@ -15,3 +15,23 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::post('supplier/add', array(
+		'as'	=>	'postAddSupplier',
+		'uses'	=>	'SupplierController@postAddSupplier'
+	));
+
+Route::get('supplier/all', array(
+		'as'	=>	'getAllSupplier',
+		'uses'	=>	'SupplierController@getAllSupplier'
+	));
+
+Route::post('supplier/edit', array(
+		'as'	=>	'postEditSupplier',
+		'uses'	=>	'SupplierController@postEditSupplier'
+	));
+
+Route::post('supplier/delete', array(
+		'as'	=>	'postDeleteSupplier',
+		'uses'	=>	'SupplierController@postDeleteSupplier'
+	));
