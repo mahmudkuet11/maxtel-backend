@@ -75,3 +75,8 @@ Route::get('item/all', array(
 		'as'	=>	'getAllItems',
 		'uses'	=>	'ItemController@getAllItems'
 	));
+
+Route::post('stock/add', array(
+		'as'	=>	'postAddStock',
+		'uses'	=>	'ItemController@postAddStock'
+	));
